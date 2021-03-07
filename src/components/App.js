@@ -4,7 +4,7 @@ import styles from "./App.module.css";
 import ContactList from "./ContactList/ContactList";
 import Filter from "./Filter/Filter";
 import ContactForm from "./ContactForm/ContactForm";
-import { SwitchTransition, CSSTransition } from "react-transition-group";
+import { CSSTransition } from "react-transition-group";
 import Title from "./Title/Title";
 import Alert from "./Alert/Alert";
 
@@ -28,9 +28,9 @@ export default class App extends Component {
       setTimeout(
         () =>
           this.setState((prevStete) => ({
-            error: (this.state.error = !prevStete),
+            error: (this.setState.error = !prevStete),
           })),
-        500
+        3000
       );
     }
     // else if (task.name.length === 0) {

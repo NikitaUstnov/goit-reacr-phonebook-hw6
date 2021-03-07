@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { CSSTransition } from "react-transition-group";
 import styles from "./Alert.module.css";
 
 const Alert = ({ title }) => {
