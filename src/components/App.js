@@ -37,13 +37,13 @@ export default class App extends Component {
     //   alert("Fields must be filled!");
     // }
     else {
-      const contact = {
+      const contacts = {
         ...task,
         id: uuidv4(),
       };
 
       this.setState((prevState) => ({
-        contacts: [...prevState.contacts, contact],
+        contacts: [...prevState.contacts, contacts],
       }));
     }
   };
