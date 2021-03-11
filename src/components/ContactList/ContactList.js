@@ -6,8 +6,8 @@ import styles from "./ContactList.module.css";
 const ContactList = ({ contacts, onRemoveContact }) => (
   <TransitionGroup component="ul" className={styles.TaskList}>
     {contacts.map((contact) => (
-      <CSSTransition timeout={200} classNames={styles}>
-        <li className={styles.TaskList_item} key={contact.id}>
+      <CSSTransition timeout={200} classNames={styles} key={contact.id}>
+        <li className={styles.TaskList_item}>
           {contact.name + ":" + contact.number}
           {
             <button

@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+
+import store from "../redux/store";
+import { addContact, testActionCreater } from "../redux/actions";
 import { v4 as uuidv4 } from "uuid";
 import styles from "./App.module.css";
 import ContactList from "./ContactList/ContactList";
@@ -7,11 +10,14 @@ import ContactForm from "./ContactForm/ContactForm";
 import { CSSTransition } from "react-transition-group";
 import Title from "./Title/Title";
 import Alert from "./Alert/Alert";
+// dispatch -доставляет action до reducer
+// store.dispatch(testActionCreater(1));
 
+// store.dispatch(addContact);
 export default class App extends Component {
   state = {
-    contacts: [],
-    filter: "",
+    // contacts: [],
+    // filter: "",
     error: false,
   };
 
@@ -88,7 +94,7 @@ export default class App extends Component {
     const visibleContacts = this.getVisibleContacts();
 
     return (
-      <div>
+      <div className={styles.container}>
         {error ? <Alert title="Already exist" /> : <></>}
 
         <Title title="Phonebook" />
